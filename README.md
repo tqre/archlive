@@ -32,4 +32,6 @@ of files created by the setup (/releng/{out,work}/) are not included needlessly.
 Next I'm going to make commits that makes a working default salt minion
 configuration to be included in the .iso file.
 
-Have to be able to load the whole system into ram...
+Have to be able to load the whole system into ram, this looks like a promising start:
+
+https://github.com/arcmags/ramroot/blob/master/ramroot
