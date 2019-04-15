@@ -1,16 +1,19 @@
 # Live Arch Linux, saltstack ready
-Custom Live Arch Linux ISO on a usb stick
-and configuring Saltstack into it to have ad-hoc minions on class machines.
+Customized Live Arch Linux ISO on a usb stick.
+Configuring Saltstack into it to have ad-hoc minions on class machines.
+Using Arch Linux as my main OS to do this.
 
+https://git.archlinux.org/archiso.git/tree/
 https://wiki.archlinux.org/index.php/Archiso
 
 ## Journal:
+
+Installed archiso package from arch repositories.
 
 ### Making the first image:
 
 All files inside /releng/airootfs should be owned by root when creating the
 image.
-
 
 	$ su
 	# chown root:root -R ~/archlive/releng/
@@ -26,4 +29,6 @@ I had to make a .gitignore file to my working directory, so large amounts
 of files created by the setup (/releng/{out,work}/) are not included needlessly.
 
 Next I'm going to make commits that makes a working default salt minion
-configuration include in the .iso file.
+configuration to be included in the .iso file.
+
+Have to be able to load the whole system into ram...
