@@ -1,6 +1,7 @@
 - salt services configuration for live usb
 - network test
 -- configure dhcdpd autostart
+- make toram boot viable - tmpfs configuration
 - boot tests on different hardware
 - master + minion setups
 - minion naming policy / generate random name at boot
