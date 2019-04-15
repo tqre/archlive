@@ -8,7 +8,16 @@ https://wiki.archlinux.org/index.php/Archiso
 
 ### Making the first image:
 
--all files inside /releng/airootfs should be owned by root
+All files inside /releng/airootfs should be owned by root when creating the
+image.
+
 
 	$ su
-	# chown root:root -R ~/archline/releng/airootfs/
+	# chown root:root -R ~/archlive/releng/
+	# ~/archlive/releng/build.sh -v
+
+Now put the image on a stick:
+
+	# wipefs ..all /dev/sdX
+	# dd bs=4M if /path/to/archlinux-2019.04.15-x86_64.iso of=/dev/sdX oflag=sync
+

@@ -58,5 +58,4 @@ vpnc
 wget
 wireless-regdb
 wireless_tools
-wpa_actiond
 xl2tpd
