@@ -52,6 +52,7 @@ smartmontools
 sudo
 tcpdump
 testdisk
+tmux
 ufw
 usb_modeswitch
 vpnc
