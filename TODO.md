@@ -3,3 +3,4 @@
 - boot tests on different hardware
 - master + minion setups
 - wireless configuration, master laptop as router, minion on local wlan
+- clean up package list
