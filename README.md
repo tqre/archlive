@@ -4,6 +4,7 @@ Configuring Saltstack into it to have ad-hoc minions on class machines.
 Using Arch Linux as my main OS to do this.
 
 https://git.archlinux.org/archiso.git/tree/
+
 https://wiki.archlinux.org/index.php/Archiso
 
 ## Journal:
