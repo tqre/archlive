@@ -1,6 +1,11 @@
 - salt services configuration for live usb
 - network test
+-- configure dhcdpd autostart
 - boot tests on different hardware
 - master + minion setups
+- minion naming policy / generate random name at boot
 - wireless configuration, master laptop as router, minion on local wlan
 - clean up package list
+- reduce runtime overhead
+- make small virtual machines with qemu/vagrant
+- keep zsh as the stick shell?
