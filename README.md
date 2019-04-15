@@ -19,7 +19,7 @@ image.
 Now put the image on a stick:
 
 	# wipefs --all /dev/sdX
-	# dd bs=4M if /path/to/archlinux-2019.04.15-x86_64.iso of=/dev/sdX oflag=sync
+	# dd bs=4M if=/path/to/archlinux-2019.04.15-x86_64.iso of=/dev/sdX oflag=sync
 
 The usb stick boots, has root autologin, and salt installed!
 I had to make a .gitignore file to my working directory, so large amounts
