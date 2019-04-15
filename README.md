@@ -18,6 +18,12 @@ image.
 
 Now put the image on a stick:
 
-	# wipefs ..all /dev/sdX
+	# wipefs --all /dev/sdX
 	# dd bs=4M if /path/to/archlinux-2019.04.15-x86_64.iso of=/dev/sdX oflag=sync
 
+The usb stick boots, has root autologin, and salt installed!
+I had to make a .gitignore file to my working directory, so large amounts
+of files created by the setup (/releng/{out,work}/) are not included needlessly.
+
+Next I'm going to make commits that makes a working default salt minion
+configuration include in the .iso file.
