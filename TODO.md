@@ -1,0 +1,5 @@
+- salt services configuration for live usb
+- network test
+- boot tests on different hardware
+- master + minion setups
+- wireless configuration, master laptop as router, minion on local wlan
