@@ -38,6 +38,6 @@ configuration to be included in the .iso file.
 Have to be able to load the whole system into ram, made some configurations to
 /archis_sys.cfg
 
-Doesn't seem to work yet. I'll take a look into this when I get some more time.
+These didn't have any effect, when booting, edit the command line with 'e'
+on the ISO boot menu. Add copytoram=y to kernel command line.
 
-https://github.com/arcmags/ramroot/blob/master/ramroot
