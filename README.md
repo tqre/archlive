@@ -29,9 +29,15 @@ The usb stick boots, has root autologin, and salt installed!
 I had to make a .gitignore file to my working directory, so large amounts
 of files created by the setup (/releng/{out,work}/) are not included needlessly.
 
+On a test laptop, the stick boots now with secure boot enabled. Testing it
+soon on different hardware.
+
 Next I'm going to make commits that makes a working default salt minion
 configuration to be included in the .iso file.
 
-Have to be able to load the whole system into ram, this looks like a promising start:
+Have to be able to load the whole system into ram, made some configurations to
+/archis_sys.cfg
+
+Doesn't seem to work yet. I'll take a look into this when I get some more time.
 
 https://github.com/arcmags/ramroot/blob/master/ramroot
