@@ -152,9 +152,9 @@ make_isolinux() {
 
 # Prepare /EFI
 make_efi() {
-    mkdir -p ${work_dir}/iso/EFI/boot
-    cp /usr/share/preloader-signed/PreLoader.efi ${work_dir}/iso/EFI/boot/bootx64.efi
-    cp /usr/share/preloader-signed/HashTool.efi ${work_dir}/iso/EFI/boot/
+    mkdir -p ${work_dir}/iso/EFI/BOOT
+    cp /usr/share/preloader-signed/PreLoader.efi ${work_dir}/iso/EFI/BOOT/bootx64.efi
+    cp /usr/share/preloader-signed/HashTool.efi ${work_dir}/iso/EFI/BOOT/
 
     cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/iso/EFI/boot/loader.efi
 
@@ -190,10 +190,10 @@ make_efiboot() {
     cp ${work_dir}/iso/${install_dir}/boot/amd_ucode.img ${work_dir}/efiboot/EFI/archiso/amd_ucode.img
 
     mkdir -p ${work_dir}/efiboot/EFI/boot
-    cp ${work_dir}/x86_64/airootfs/usr/share/efitools/efi/PreLoader.efi ${work_dir}/efiboot/EFI/boot/bootx64.efi
-    cp ${work_dir}/x86_64/airootfs/usr/share/efitools/efi/HashTool.efi ${work_dir}/efiboot/EFI/boot/
+    cp /usr/share/preloader-signed/PreLoader.efi ${work_dir}/efiboot/EFI/BOOT/bootx64.efi
+    cp /usr/share/preloader-signed/HashTool.efi ${work_dir}/efiboot/EFI/BOOT/
 
-    cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/efiboot/EFI/boot/loader.efi
+    cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/efiboot/EFI/BOOT/loader.efi
 
     mkdir -p ${work_dir}/efiboot/loader/entries
     cp ${script_path}/efiboot/loader/loader.conf ${work_dir}/efiboot/loader/
