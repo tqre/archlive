@@ -1,6 +1,6 @@
 - salt services configuration for live usb
 - network test
-- make system load itself to ram automatically
+- make system load itself to ram automatically, review syslinux/.cfg files
 - boot tests on different hardware
 - master + minion setups
 - minion naming policy / generate random name at boot
