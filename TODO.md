@@ -1,11 +1,8 @@
-- salt services configuration for live usb
-- network test
 - make system load itself to ram automatically, review syslinux/.cfg files
-- boot tests on different hardware
+- boot tests on different hardware, namely windows machines
 - master + minion setups
 - minion naming policy / generate random name at boot
 - wireless configuration, master laptop as router, minion on local wlan
-- clean up package list
 - reduce runtime overhead
 - make small virtual machines with qemu/vagrant
-- keep zsh as the stick shell?
+- keep zsh as the shell? rly?
