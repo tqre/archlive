@@ -13,16 +13,21 @@ Installed archiso package from arch repositories.
 
 ### Making the first image:
 
-All files inside /releng/airootfs should be owned by root when creating the
-image.
+Run the script as root, and make sure everything is also owned by root,
+as airootfs requires this.
 
 	$ su
-	# chown root:root -R ~/archlive/releng/
+	# chown root:root -R ~/archlive
 	# ~/archlive/releng/build.sh -v
 
 The usb stick boots, has root autologin, and salt installed!
 I had to make a .gitignore file to my working directory, so large amounts
 of files created by the setup (/releng/{out,work}/) are not included needlessly.
+
+The preloader efi-files needed to boot with secure-boot on can be 
+found from AUR: preloader-signed, see the following webpage for details:
+
+https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/
 
 On a test laptop, the stick boots now with secure boot enabled. Testing it
 soon on different hardware. Resorting atm to VBox-Win10 with rufus to burn iso-files created
@@ -37,6 +42,7 @@ Have to be able to load the whole system into ram, made some configurations to
 Current workaround: when booting, edit the command line with 'e'
 on the ISO boot menu. Add copytoram=y to kernel command line.
 
-### Stripping build
+### Stripping build & making local salt master-minion
 
-Minimal configuration preferred.
+Autoconfiguring testing on local master-minion relationship incoming.
+
