@@ -1,1 +1,0 @@
-Salt configuration files
