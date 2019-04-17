@@ -20,24 +20,23 @@ image.
 	# chown root:root -R ~/archlive/releng/
 	# ~/archlive/releng/build.sh -v
 
-Now put the image on a stick:
-
-	# wipefs --all /dev/sdX
-	# dd bs=4M if=/path/to/archlinux-2019.04.15-x86_64.iso of=/dev/sdX oflag=sync
-
 The usb stick boots, has root autologin, and salt installed!
 I had to make a .gitignore file to my working directory, so large amounts
 of files created by the setup (/releng/{out,work}/) are not included needlessly.
 
 On a test laptop, the stick boots now with secure boot enabled. Testing it
-soon on different hardware.
+soon on different hardware. Resorting atm to VBox-Win10 with rufus to burn iso-files created
+to /archlive/releng/out directory, as some (Windows) machines don't see the sticks created
+with dd at all.
 
 Next I'm going to make commits that makes a working default salt minion
 configuration to be included in the .iso file.
 
 Have to be able to load the whole system into ram, made some configurations to
-/archis_sys.cfg
-
-These didn't have any effect, when booting, edit the command line with 'e'
+/archis_sys.cfg, but these didn't have any effect.
+Current workaround: when booting, edit the command line with 'e'
 on the ISO boot menu. Add copytoram=y to kernel command line.
 
+### Stripping build
+
+Minimal configuration preferred.
