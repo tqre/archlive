@@ -44,5 +44,6 @@ on the ISO boot menu. Add copytoram=y to kernel command line.
 
 ### Stripping build & making local salt master-minion
 
-Autoconfiguring testing on local master-minion relationship incoming.
+Autoconfiguring testing on local master-minion relationship works, along with
+the sed-line added to customize_airootfs.sh to remove python warning.
 
