@@ -22,6 +22,8 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 systemctl enable pacman-init.service choose-mirror.service
 systemctl set-default multi-user.target
 
-systemctl start dhcpcd
+systemctl enable dhcpcd.service
+systemctl enable salt-minion.service
+systemctl enable salt-master.service
 
-#systemctl start salt-minion
+sed -i '149s/encoding=encoding/raw=False/' /usr/lib/python2.7/site-packages/salt/payload.py
