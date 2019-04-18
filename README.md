@@ -51,6 +51,6 @@ to customize_airootfs.sh to correct python warning (fixed in salt-dev).
 ### Kind of security alert
 
 The salt keypairs are generated upon enabling the service for the first time.
-If this is done before while making the iso image, it results in same keypair
+If this is done in airootfs, before making the iso image, it results in same keypair
 in all the minions. This is why initial salt configuration should be done
 with a script.
