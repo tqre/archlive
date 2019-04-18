@@ -1,8 +1,9 @@
-- make system load itself to ram automatically, review syslinux/.cfg files
-- boot tests on different hardware, namely windows machines
-- master + minion setups
-- minion naming policy / generate random name at boot
-- wireless configuration, master laptop as router, minion on local wlan
-- reduce runtime overhead
-- make small virtual machines with qemu/vagrant
+
+- review efi partition file placement
+- master + minion setups configured via git
+	- masters ip address changes
+	- minion naming policy
+- make small virtual machines with qemu or vagrant
+	- custom vagrant box perhaps
+	- build salt on LFS-system
 - keep zsh as the shell? rly?

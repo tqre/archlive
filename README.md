@@ -42,3 +42,10 @@ Boot testing on local master-minion relationship works, just have to accept
 the local minions key! 
 Added the sed-line added to customize_airootfs.sh to remove python warning.
 
+### Initial test work
+
+The class machines now boot up, some syslinux stuff still needs checking, as
+on a laptop test machine, the splash screen shows up wrong. Have to recheck
+the efi partition directories in the script, as I made some changes to them
+(/BOOT instead of /boot). They seem to end up in wrong places...
+
