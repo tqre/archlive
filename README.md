@@ -49,3 +49,9 @@ on a laptop test machine, the splash screen shows up wrong. Have to recheck
 the efi partition directories in the script, as I made some changes to them
 (/BOOT instead of /boot). They seem to end up in wrong places...
 
+### Kind of security alert
+
+The salt keypairs are generated upon enabling the service for the first time.
+If this is done before while making the iso image, it results in same keypair
+in all the minions. This is why initial salt configuration should be done
+with a script.
