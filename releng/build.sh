@@ -2,7 +2,7 @@
 
 set -e -u
 
-mkarchiso=/home/tqre/archlive/mkarchiso
+mkarchiso=./mkarchiso
 iso_name=archlinux
 iso_label="ARCH_$(date +%Y%m)"
 iso_publisher="Arch Linux <http://www.archlinux.org>"
@@ -153,9 +153,9 @@ make_isolinux() {
 
 # Prepare /EFI
 make_efi() {
-    mkdir -p ${work_dir}/iso/EFI/BOOT
-    cp ${script_path}/efifiles/PreLoader.efi ${work_dir}/iso/EFI/BOOT/bootx64.efi
-    cp ${script_path}/efifiles/HashTool.efi ${work_dir}/iso/EFI/BOOT/
+    mkdir -p ${work_dir}/iso/EFI/boot
+    cp ${script_path}/efifiles/PreLoader.efi ${work_dir}/iso/EFI/boot/bootx64.efi
+    cp ${script_path}/efifiles/HashTool.efi ${work_dir}/iso/EFI/boot/
 
     cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/iso/EFI/boot/loader.efi
 
@@ -191,10 +191,10 @@ make_efiboot() {
     cp ${work_dir}/iso/${install_dir}/boot/amd_ucode.img ${work_dir}/efiboot/EFI/archiso/amd_ucode.img
 
     mkdir -p ${work_dir}/efiboot/EFI/boot
-    cp ${script_path}/efifiles/PreLoader.efi ${work_dir}/efiboot/EFI/BOOT/bootx64.efi
-    cp ${script_path}/efifiles/HashTool.efi ${work_dir}/efiboot/EFI/BOOT/
+    cp ${script_path}/efifiles/PreLoader.efi ${work_dir}/efiboot/EFI/boot/bootx64.efi
+    cp ${script_path}/efifiles/HashTool.efi ${work_dir}/efiboot/EFI/boot/
 
-    cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/efiboot/EFI/BOOT/loader.efi
+    cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/efiboot/EFI/boot/loader.efi
 
     mkdir -p ${work_dir}/efiboot/loader/entries
     cp ${script_path}/efiboot/loader/loader.conf ${work_dir}/efiboot/loader/
