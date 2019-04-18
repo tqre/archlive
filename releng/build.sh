@@ -133,7 +133,7 @@ make_syslinux() {
         sed "s|%ARCHISO_LABEL%|${iso_label}|g;
              s|%INSTALL_DIR%|${install_dir}|g" ${_cfg} > ${work_dir}/iso/${install_dir}/boot/syslinux/${_cfg##*/}
     done
-    cp ${script_path}/syslinux/splash.png ${work_dir}/iso/${install_dir}/boot/syslinux
+r    cp ${script_path}/syslinux/splash.png ${work_dir}/iso/${install_dir}/boot/syslinux
     cp ${work_dir}/x86_64/airootfs/usr/lib/syslinux/bios/*.c32 ${work_dir}/iso/${install_dir}/boot/syslinux
     cp ${work_dir}/x86_64/airootfs/usr/lib/syslinux/bios/lpxelinux.0 ${work_dir}/iso/${install_dir}/boot/syslinux
     cp ${work_dir}/x86_64/airootfs/usr/lib/syslinux/bios/memdisk ${work_dir}/iso/${install_dir}/boot/syslinux
@@ -154,8 +154,8 @@ make_isolinux() {
 # Prepare /EFI
 make_efi() {
     mkdir -p ${work_dir}/iso/EFI/BOOT
-    cp /usr/share/preloader-signed/PreLoader.efi ${work_dir}/iso/EFI/BOOT/bootx64.efi
-    cp /usr/share/preloader-signed/HashTool.efi ${work_dir}/iso/EFI/BOOT/
+    cp ${script_path}/efifiles/PreLoader.efi ${work_dir}/iso/EFI/BOOT/bootx64.efi
+    cp ${script_path}/efifiles/HashTool.efi ${work_dir}/iso/EFI/BOOT/
 
     cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/iso/EFI/boot/loader.efi
 
@@ -191,8 +191,8 @@ make_efiboot() {
     cp ${work_dir}/iso/${install_dir}/boot/amd_ucode.img ${work_dir}/efiboot/EFI/archiso/amd_ucode.img
 
     mkdir -p ${work_dir}/efiboot/EFI/boot
-    cp /usr/share/preloader-signed/PreLoader.efi ${work_dir}/efiboot/EFI/BOOT/bootx64.efi
-    cp /usr/share/preloader-signed/HashTool.efi ${work_dir}/efiboot/EFI/BOOT/
+    cp ${script_path}/efifiles/PreLoader.efi ${work_dir}/efiboot/EFI/BOOT/bootx64.efi
+    cp ${script_path}/efifiles/HashTool.efi ${work_dir}/efiboot/EFI/BOOT/
 
     cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/efiboot/EFI/BOOT/loader.efi
 
