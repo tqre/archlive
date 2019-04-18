@@ -24,6 +24,5 @@ systemctl set-default multi-user.target
 
 systemctl enable dhcpcd.service
 systemctl enable salt-minion.service
-systemctl enable salt-master.service
 
 sed -i '149s/encoding=encoding/raw=False/' /usr/lib/python2.7/site-packages/salt/payload.py
