@@ -9,7 +9,8 @@ https://wiki.archlinux.org/index.php/Archiso
 
 ## Journal:
 
-Installed archiso package from arch repositories.
+Installed archiso package from arch repositories, as it is still used partly on
+scripts.
 
 ### Making the first image:
 
@@ -17,8 +18,12 @@ Run the script as root, and make sure everything is also owned by root,
 as airootfs requires this.
 
 	$ su
-	# chown root:root -R ~/archlive
+	# chown root:root -R ~/archlive/releng
 	# ~/archlive/releng/build.sh -v
+
+To reset the build completely, remove the work/ directory. On minor changes
+just removing the lock files /work/build.make_* works, and speeds up the
+process.	
 
 The usb stick boots to ram, has root autologin, and a local saltstack ready to go.
 
