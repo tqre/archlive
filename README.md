@@ -12,47 +12,41 @@ https://wiki.archlinux.org/index.php/Archiso
 Installed archiso package from arch repositories, as it is still used partly on
 scripts.
 
-### Making the first image:
+### Making the image:
 
-Run the script as root, and make sure everything is also owned by root,
+Script has to be run as root. Make sure everything is also owned by root,
 as airootfs requires this.
 
 	$ su
 	# chown root:root -R ~/archlive/releng
 	# ~/archlive/releng/build.sh -v
 
+You get an .iso file into /releng/out -directory, which can be dd'd onto 
+usb stick. As some (Windows) machines can't see dd-created bootsticks,
+I'm using VBox-Win10 and Rufus to be able to boot on classrooms machines.
+
 To reset the build completely, remove the work/ directory. On minor changes
 just removing the lock files /work/build.make_* works, and speeds up the
 process.	
 
-The usb stick boots to ram, has root autologin, and a local saltstack ready to go.
+The usb stick loads Arch Linux into ram and has root autologin.
 
-I had to make a .gitignore file to my working directory, so large amounts
-of files created by the setup (/releng/{out,work}/) are not included needlessly.
-The preloader efi-files needed to boot with secure-boot on can be 
-found from AUR: preloader-signed, see the following webpage for details:
+### Secure boot enabled?
+
+The original preloader efi-files needed to boot with secure-boot enabled 
+are replaced with preloader-signed, see the following webpage for details:
 
 https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/
 
 To reset the build, remove the lock files from /work directory: build.make_*
 
-On a test laptop, the stick boots now with secure boot enabled. Testing it
-soon on different hardware. Resorting atm to VBox-Win10 with rufus to burn iso-files created
-to /archlive/releng/out directory, as some (Windows) machines don't see the sticks created
-with dd at all.
+On a test laptop, the stick boots now with secure boot enabled. This results
+using efiboot directory upon boot. On classrooms desktops syslinux got into use.
 
 ### Stripping build & making local salt master-minion
 
-Boot testing on local master-minion relationship works, just have to accept
-the local minions key! 
-Added the sed-line added to customize_airootfs.sh to remove python warning.
-
-### Initial test work
-
-The class machines now boot up, some syslinux stuff still needs checking, as
-on a laptop test machine, the splash screen shows up wrong. Have to recheck
-the efi partition directories in the script, as I made some changes to them
-(/BOOT instead of /boot). They seem to end up in wrong places...
+Testing on local master-minion relationship works. Added the sed-line added 
+to customize_airootfs.sh to correct python warning (fixed in salt-dev).
 
 ### Kind of security alert
 
