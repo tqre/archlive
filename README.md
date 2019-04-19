@@ -18,8 +18,8 @@ https://git.archlinux.org/archiso.git/tree/
 
 https://wiki.archlinux.org/index.php/Archiso
 
-Install archiso package from arch repositories, as it is still used partly on
-scripts.
+Install archiso package is required from arch repositories, as it is still used
+partly on scripts.
 
 ### Making the images:
 
