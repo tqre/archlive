@@ -24,7 +24,7 @@ partly on scripts.
 
 ### Making the images:
 
-Run the helper scripts either for minions or masters. Please check the
+Run the build script either for minions or master. Please check the
 scripts before running them to know what you are doing.
 
 You end up with an .iso file into /releng/out -directory, which can be dd'd onto 
@@ -32,7 +32,8 @@ usb stick. As some (Windows) machines can't see dd-created bootsticks,
 I'm using VBox-Win10 and Rufus to be able to boot on classrooms machines.
 
 The usb stick loads Arch Linux into ram and has root autologin. Zsh is the current
-shell with gmpr-config package.
+shell with gmpr-config package. Upon boot, the minion clones the minion
+repository and runs a script from there configuring salt and starts the service.
 
 ### Secure boot enabled?
 
