@@ -2,7 +2,7 @@
 
 set -e -u
 
-mkarchiso=./mkarchiso
+mkarchiso=releng/mkarchiso
 iso_name=archlinux
 iso_label="ARCH_$(date +%Y%m)"
 iso_publisher="Arch Linux <http://www.archlinux.org>"
