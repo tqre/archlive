@@ -7,7 +7,7 @@ Work in progress!
 
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
-- install archiso with pacman
+- install archiso and arch-install-scripts with pacman
 - clone this repo
 - check the script you're running
 - run the script (build_minion or build_master)
