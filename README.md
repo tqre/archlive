@@ -19,8 +19,8 @@ https://git.archlinux.org/archiso.git/tree/
 
 https://wiki.archlinux.org/index.php/Archiso
 
-Install archiso package is required from arch repositories, as it is still used
-partly on scripts.
+archiso package and arch-install-scripts are required from arch repositories, as they
+are used.
 
 ### Making the images:
 
