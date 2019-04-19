@@ -1,12 +1,11 @@
 # Live Arch Linux, saltstack ready
 
 I'm using Arch Linux as my working environment, haven't tested on other distros.
+Work in progress!
 
-As this is work in progress, no warranties! Blame yourself if you mess up your system.
-
-#### Preferred method: Use Arch Linux in a virtual environment, clone the repo, run
-
-#### the script, learn the dance, buy the shirt.
+#### Preferred method: 
+Use Arch Linux in a virtual environment, clone the repo, run the script,
+learn the dance, buy the shirt.
 
 Customized Live Arch Linux ISO creation automation.
 2 different ISOs: salt-master & salt minion
