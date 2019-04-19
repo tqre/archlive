@@ -33,7 +33,7 @@ I'm using VBox-Win10 and Rufus to be able to boot on classrooms machines.
 
 The usb stick loads Arch Linux into ram and has root autologin. Zsh is the current
 shell with gmpr-config package. On login, the minion clones the minion
-repository and runs a script from there configuring salt and starts the service.
+repository and runs a script from there configuring salt and starting the service.
 
 ### Secure boot enabled?
 
