@@ -7,7 +7,7 @@ Work in progress!
 
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
-- install archiso with pacman
+- install archiso and arch-install-scripts with pacman
 - clone this repo
 - check the script you're running
 - run the script (build_minion or build_master)
@@ -19,8 +19,8 @@ https://git.archlinux.org/archiso.git/tree/
 
 https://wiki.archlinux.org/index.php/Archiso
 
-Install archiso package is required from arch repositories, as it is still used
-partly on scripts.
+archiso package and arch-install-scripts are required from arch repositories, as they
+are used.
 
 ### Making the images:
 
