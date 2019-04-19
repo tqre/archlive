@@ -1,16 +1,17 @@
 # Live Arch Linux, saltstack ready
 
+Customised Live ISO creation. Different scripts for masters & minions.
+
 I'm using Arch Linux as my working environment, haven't tested on other distros.
 Work in progress!
 
 #### Preferred method: 
-Use Arch Linux in a virtual environment, clone the repo, run the script,
-learn the dance, buy the shirt.
+- Use Arch Linux in a virtual environment
+- clone the repo
+- run the script (build_minion or build_master)
+- learn the dance, buy the shirt...
 
-Customized Live Arch Linux ISO creation automation.
-2 different ISOs: salt-master & salt minion
-
-References:
+#### References:
 
 https://git.archlinux.org/archiso.git/tree/
 
