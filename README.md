@@ -32,7 +32,7 @@ usb stick. As some (Windows) machines can't see dd-created bootsticks,
 I'm using VBox-Win10 and Rufus to be able to boot on classrooms machines.
 
 The usb stick loads Arch Linux into ram and has root autologin. Zsh is the current
-shell with gmpr-config package. Upon boot, the minion clones the minion
+shell with gmpr-config package. On login, the minion clones the minion
 repository and runs a script from there configuring salt and starts the service.
 
 ### Secure boot enabled?
