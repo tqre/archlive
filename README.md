@@ -3,14 +3,18 @@
 I'm using Arch Linux as my working environment, haven't tested on other distros.
 
 As this is work in progress, no warranties! Blame yourself if you mess up your system.
+
 #### Preferred method: Use Arch Linux in a virtual environment, clone the repo, run
+
 #### the script, learn the dance, buy the shirt.
 
 Customized Live Arch Linux ISO creation automation.
 2 different ISOs: salt-master & salt minion
 
 References:
+
 https://git.archlinux.org/archiso.git/tree/
+
 https://wiki.archlinux.org/index.php/Archiso
 
 Install archiso package from arch repositories, as it is still used partly on
