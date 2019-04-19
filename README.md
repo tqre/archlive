@@ -8,7 +8,8 @@ Work in progress!
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
 - install archiso with pacman
-- clone the repo
+- clone this repo
+- check the script you're running
 - run the script (build_minion or build_master)
 - learn the dance, buy the shirt...
 
