@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script to build Salted Arch Linux iso files
 
-set -e -u
+set -e
 
 display_help() {
 echo "
