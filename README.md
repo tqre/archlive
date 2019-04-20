@@ -10,7 +10,7 @@ Work in progress!
 - install archiso and arch-install-scripts with pacman
 - clone this repo
 - check the script you're running
-- run the script (build_minion or build_master)
+- run the script: ./isomake [master|minion]
 - learn the dance, buy the shirt...
 
 #### References:
