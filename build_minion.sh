@@ -15,13 +15,18 @@ if [[ $PWD != */archlive ]]; then
 fi
 
 # Change ownership
-chown root:root ./ -Rv
+chown root:root ./ -R
+
+# Clean up
+rm -v releng/airootfs/root/.zlogin
+echo "Removing /work directory to have a clean build"
+rm -rf work
 
 # Move the minion loginscript to right place
-cp -v alt_files/minion_zlogin airootfs/root/.zlogin
+cp -v releng/alt_files/minion_zlogin releng/airootfs/root/.zlogin
 
 # Start the main iso-building script
-./build.sh -v
+releng/build.sh -v
 
 # Revert ownership back
 #chown user:user ./ -Rv
@@ -29,7 +34,3 @@ cp -v alt_files/minion_zlogin airootfs/root/.zlogin
 # Move the iso file somewhere if needed
 #mv -v out/*.iso /home
 
-# Clean up
-rm -v /releng/airootfs/root/.zlogin
-echo "Removing /work directory to have clean build next time..."
-rm -rf /work

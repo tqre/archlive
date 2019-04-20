@@ -7,7 +7,7 @@ Work in progress!
 
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
-- install archiso with pacman
+- install archiso and arch-install-scripts with pacman
 - clone this repo
 - check the script you're running
 - run the script (build_minion or build_master)
@@ -19,12 +19,12 @@ https://git.archlinux.org/archiso.git/tree/
 
 https://wiki.archlinux.org/index.php/Archiso
 
-Install archiso package is required from arch repositories, as it is still used
-partly on scripts.
+archiso package and arch-install-scripts are required from arch repositories, as they
+are used.
 
 ### Making the images:
 
-Run the helper scripts either for minions or masters. Please check the
+Run the build script either for minions or master. Please check the
 scripts before running them to know what you are doing.
 
 You end up with an .iso file into /releng/out -directory, which can be dd'd onto 
@@ -32,7 +32,8 @@ usb stick. As some (Windows) machines can't see dd-created bootsticks,
 I'm using VBox-Win10 and Rufus to be able to boot on classrooms machines.
 
 The usb stick loads Arch Linux into ram and has root autologin. Zsh is the current
-shell with gmpr-config package.
+shell with gmpr-config package. On login, the minion clones the minion
+repository and runs a script from there configuring salt and starting the service.
 
 ### Secure boot enabled?
 

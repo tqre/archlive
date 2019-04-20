@@ -1,2 +1,3 @@
-/releng/out/*
-/releng/work/*
+releng/airootfs/root/.zlogin
+out/*
+work/*
