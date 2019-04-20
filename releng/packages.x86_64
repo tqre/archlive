@@ -8,6 +8,4 @@ rsync
 salt
 tmux
 ufw
-vagrant
-virtualbox
 wget
