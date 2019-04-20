@@ -61,7 +61,7 @@ releng/build.sh -v
 
 # Move the iso file somewhere if needed
 # TODO: add command line argument for this
-#mv -v out/*.iso /path/to/directory
+#mv -v out/*.iso /path/to/move
 
 # Comment this out to examine the built airootfs in work/
 #cleanup
