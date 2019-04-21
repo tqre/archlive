@@ -12,8 +12,8 @@ Work in progress!
 - ensure system is up-to-date with pacman -Suy, reboot if necessary
 - clone this repo
 - check the script you're running
-- run the script: ./isomake [master|minion]
-- learn the dance, buy the shirt...
+- run the script: sudo ./isomake [master|minion]
+- use dd or other tools to create a bootable medium
 
 #### References:
 
@@ -21,8 +21,8 @@ https://git.archlinux.org/archiso.git/tree/
 
 https://wiki.archlinux.org/index.php/Archiso
 
-archiso package and arch-install-scripts are required from arch repositories, as they
-are used.
+Archiso package and arch-install-scripts are required from arch repositories, as
+parts of them are used.
 
 ### Making the images:
 
@@ -31,7 +31,7 @@ scripts before running them to know what you are doing.
 
 You end up with an .iso file into /releng/out -directory, which can be dd'd onto 
 usb stick. As some (Windows) machines can't see dd-created bootsticks,
-I'm using VBox-Win10 and Rufus to be able to boot on classrooms machines.
+I'm using VBox-Win10 and Rufus to be able to boot on school's machines.
 
 The usb stick loads Arch Linux into ram and has root autologin. Zsh is the current
 shell with gmpr-config package. On login, the minion clones the minion
@@ -39,17 +39,18 @@ repository and runs a script from there configuring salt and starting the servic
 
 ### Secure boot enabled?
 
-The original preloader efi-files needed to boot with secure-boot enabled 
-are replaced with preloader-signed, see the following webpage for details:
+The original preloader efi-files have been replaced with with preloader-signed to 
+enable booting with secure boot enabled, see the following webpage for details:
 
 https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/
 
-On my test laptop, the stick boots now with secure boot enabled. This results
-using efiboot directory upon boot. On classrooms desktops syslinux got into use.
+On my test laptop (2013 HP255), the stick boots now with secure boot enabled. This 
+results using efiboot directory upon boot. Otherwise syslinux gets used. Don't know
+yet what is the main trigger. Probably something to do with EFI...
 
 ### Kind of security alert
 
-The salt keypairs are generated upon enabling the service for the first time.
-If this is done in airootfs, before making the iso image, it results in same keypair
-in all the minions. This is why initial salt configuration should be done
-with a script.
+The salt keypairs are generated upon enabling/starting the service for the first time.
+If this is done in airootfs before making the iso image it results in same keypair
+in all the minions. This is why initial salt configuration should be done with a
+script.
