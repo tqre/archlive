@@ -57,11 +57,11 @@ make_iso_preconfig $1
 releng/build.sh -v
 
 # Revert ownership back
-#chown user:user ./ -R
+chown tqre:tqre ./ -R
 
 # Move the iso file somewhere if needed
 # TODO: add command line argument for this
-#mv -v out/*.iso /path/to/move
+mv -v out/*.iso /home/tqre/Desktop/VBoxShare/$1.iso
 
 # Comment this out to examine the built airootfs in work/
 #cleanup
