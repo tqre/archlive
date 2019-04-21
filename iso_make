@@ -43,7 +43,7 @@ cleanup() {
 }
 
 make_iso_preconfig() {
-	cp -v releng/alt_files/$1_zlogin $loginfile
+	cp -v $1_autologin $loginfile
 }
 
 # Do initial checks and preparations
