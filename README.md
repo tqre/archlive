@@ -7,6 +7,7 @@ Work in progress!
 
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
+  - https://wiki.archlinux.org/index.php/Installation_guide
 - install archiso and arch-install-scripts with pacman
 - ensure system is up-to-date with pacman -Suy, reboot if necessary
 - clone this repo
