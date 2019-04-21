@@ -42,16 +42,12 @@ cleanup() {
 	if [[ -d work ]]; then rm -rf work/; fi
 }
 
-make_iso_preconfig() {
-	cp -v $1_autologin $loginfile
-}
-
 # Do initial checks and preparations
 root_check
 pwd_check
 chown root:root ./ -R
 cleanup
-make_iso_preconfig $1
+cp -v $1_autologin $loginfile
 
 # Main build script, modified from archiso package
 releng/build.sh -v
