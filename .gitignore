@@ -1,3 +1,4 @@
 releng/airootfs/root/.zlogin
+releng/qemu/*
 out/*
 work/*
