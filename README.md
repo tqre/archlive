@@ -37,16 +37,19 @@ The usb stick loads Arch Linux into ram and has root autologin. Zsh is the curre
 shell with gmpr-config package. On login, the minion clones the minion
 repository and runs a script from there configuring salt and starting the service.
 
-### Secure boot enabled?
+### Secure boot
 
 The original preloader efi-files have been replaced with with preloader-signed to 
-enable booting with secure boot enabled, see the following webpage for details:
+enable booting with secure boot enabled, see the following old webpage for details:
 
 https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/
 
-On my test laptop (2013 HP255), the stick boots now with secure boot enabled. This 
-results using efiboot directory upon boot. Otherwise syslinux gets used. Don't know
+On my test laptop (2013 HP255), can't get a good grip on that tool yet, I managed to 
+boot it with secure boot enabled, but I don't understand it yet. This 
+results using efiboot directory upon boot? Otherwise syslinux gets used. Don't know
 yet what is the main trigger. Probably something to do with EFI...
+
+Well this is giving problems... gotta look into this more...
 
 ### Kind of security alert
 
