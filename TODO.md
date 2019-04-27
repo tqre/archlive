@@ -2,5 +2,6 @@
 - review efi partition file placement
 - give ISO a different name on master/minion configs
 - make small virtual machines with qemu or vagrant
-	- custom vagrant box perhaps
-	- build salt on LFS-system
+
+- build salt on LFS-system
+- make salt to run python3 instead of 2 on arch	
