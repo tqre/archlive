@@ -3,23 +3,14 @@ git
 grml-zsh-config
 htop
 libvirt
+libvirt-python
+libvirt-python2
 nmap
 openssh
 qemu
 rsync
+salt
 tmux
 ufw
 wget
 
-zeromq
-python-pip
-python-pycryptodome
-python-jinja
-python-m2crypto
-python-markupsafe
-python-msgpack
-python-pyzmq
-python-requests
-python-systemd
-python-tornado
-python-yaml 
