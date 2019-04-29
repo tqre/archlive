@@ -1,4 +1,4 @@
 # Spawning virtual qcows:
 # ./img_create <name>
 
-qemu-img create -f qcow2 -o backing_file=/qemu/BLFS-0.3.qcow2 $1.qcow2
+qemu-img create -f qcow2 -o backing_file=~/archlive/releng/airootfs/qemu/BLFS-0.3.qcow2 $1.qcow2
