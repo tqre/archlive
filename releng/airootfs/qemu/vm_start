@@ -1,26 +1,4 @@
-# Spawning virtual machines:
+# Start ad-hoc instance with ssh connection
 # ./vm_start <name>
 
 qemu-system-x86_64 -drive file=$1.qcow2 -nographic --enable-kvm -net nic -net user,hostfwd=tcp::10022-:22 -m 256M
-
-# mac address is defined here
-# qemu-system-x86_64
-#	-drive file=$1.qcow2 -nographic -enable-kvm -m 256M
-#	-net nic -net user,hostfwd=tcp::10022-:22
-#	-device e1000,netdev=net0,mac=DE:AD:BE:EF:00:00 -netdev tap,id=net0
-
-# bridge set up on hypervisor! -> archlive bootup
-# on hypervisor:
-# ip link add name br0 type bridge
-# ip link set <enp03s> master br0
-# /etc/qemu-ifup -script
- 
-# Manual ip:
-# ip addr add dev br0 10.0.0.0/24
-
-# system is accessible on host with: ssh localadmin@localhost -p10022
-# port forwarding, -sshd enabled on virtual machine
-# qemu-system-x86_64 disk_image -net nic -net user,hostfwd=tcp::10022-:22
-
-# file sharing
-# qemu built-in smb server?

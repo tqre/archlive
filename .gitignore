@@ -1,5 +1,4 @@
 releng/airootfs/root/.zlogin
 releng/airootfs/qemu/*.qcow2
-qemu/*
 out/*
 work/*
