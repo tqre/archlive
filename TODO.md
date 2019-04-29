@@ -1,7 +1,6 @@
 # TODO
 - review efi partition file placement
-- give ISO a different name on master/minion configs
-- make small virtual machines with qemu or vagrant
+- make users -> normal user autologin
+- gui for libvirt managers?
+- bridge for virtual lfs-minions
 
-- build salt on LFS-system
-- make salt to run python3 instead of 2 on arch	
