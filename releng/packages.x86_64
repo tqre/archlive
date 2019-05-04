@@ -16,4 +16,6 @@ salt
 tmux
 ufw
 wget
-
+xfce4
+xorg
+xorg-xinit
