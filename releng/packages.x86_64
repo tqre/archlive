@@ -15,6 +15,7 @@ rsync
 salt
 tmux
 ufw
+virt-manager
 wget
 xfce4
 xorg
