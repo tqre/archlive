@@ -2,7 +2,7 @@
 # Script to build Salted Arch Linux iso files
 
 set -e
-loginfile=releng/airootfs/root/.zlogin
+customize=releng/airootfs/root/customize_airootfs.sh
 
 display_help() {
 	echo "
@@ -38,7 +38,6 @@ pwd_check() {
 }
 
 cleanup() {
-	if [[ -e $loginfile ]]; then rm -v $loginfile; fi
 	if [[ -d work ]]; then rm -rf work/; fi
 }
 
@@ -47,7 +46,7 @@ root_check
 pwd_check
 chown root:root ./ -R
 cleanup
-cp -v $1_autologin $loginfile
+cp -v $1_airootfs $customize
 
 # Main build script, modified from archiso package
 releng/build.sh -v

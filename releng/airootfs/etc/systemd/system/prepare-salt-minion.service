@@ -1,0 +1,11 @@
+[Unit]
+Description=Prepare Salt-minion Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c "git clone https://github.com/tqre/archlive-saltminion /tmp/minion"
+
+[Install]
+WantedBy=multi-user.target
+
