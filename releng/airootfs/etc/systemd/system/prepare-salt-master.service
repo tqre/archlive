@@ -1,0 +1,11 @@
+[Unit]
+Description=Prepare Salt-master Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c "git clone https://github.com/tqre/archlive-saltmaster /tmp/master"
+
+[Install]
+WantedBy=multi-user.target
+
