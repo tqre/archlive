@@ -46,6 +46,8 @@ root_check
 pwd_check
 chown root:root ./ -R
 cleanup
+
+# copy customisations over (master/minion)
 cp -v $1_airootfs $customize
 
 # Main build script, modified from archiso package
