@@ -2,7 +2,6 @@
 # Script to build Salted Arch Linux iso files
 
 set -e
-customize=releng/airootfs/root/customize_airootfs.sh
 
 display_help() {
 	echo "
@@ -47,8 +46,8 @@ pwd_check
 chown root:root ./ -R
 cleanup
 
-# copy customisations over (master/minion)
-cp -v $1_airootfs $customize
+# Enable prepare-salt-{master|minion}.service to iso startup sequence
+sed -i "s/prepare-salt-.*$/prepare-salt-$1.service/" releng/airootfs/root/customize_airootfs.sh
 
 # Main build script, modified from archiso package
 releng/build.sh -v
@@ -62,5 +61,6 @@ mv -v out/*.iso /home/tqre/Desktop/VBoxShare/$1.iso
 
 # Comment this out to examine the built airootfs in work/
 #cleanup
+
 
 
