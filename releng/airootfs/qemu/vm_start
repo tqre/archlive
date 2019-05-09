@@ -1,4 +1,7 @@
 # Start ad-hoc instance with ssh connection
 # ./vm_start <name>
 
-qemu-system-x86_64 -drive file=$1.qcow2 -nographic -enable-kvm -net nic -net user,hostfwd=tcp::10022-:22 -m 128M
+qemu-system-x86_64 -drive file=$1.qcow2 \
+-nographic -enable-kvm \
+-net nic -net user,hostfwd=tcp::10022-:22 -m 144M
+
