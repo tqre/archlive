@@ -13,5 +13,6 @@ qemu-system-x86_64 -drive file=$1$i.qcow2 \
 
 # vm's Ip address is 10.0.2.15 anyway, change that!
 # also remove existing master_minion key from LFS build
+# specify individual hostnames with netdev -option?
 
 done
