@@ -24,4 +24,4 @@ systemctl set-default multi-user.target
 
 sed -i '149s/encoding=encoding/raw=False/' /usr/lib/python2.7/site-packages/salt/payload.py
 
-systemctl enable prepare-salt-master.service
+systemctl enable prepare-salt-minion.service
