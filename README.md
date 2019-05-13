@@ -33,9 +33,16 @@ You end up with an .iso file into /releng/out -directory, which can be dd'd onto
 usb stick. As some (Windows) machines can't see dd-created bootsticks,
 I'm using VBox-Win10 and Rufus to be able to boot on school's machines.
 
-The usb stick loads Arch Linux into ram and has root autologin. Zsh is the current
-shell with gmpr-config package. On login, the minion clones the minion
-repository and runs a script from there configuring salt and starting the service.
+### Booting the sticks:
+
+The usb stick loads Arch Linux into ram with 3G cowspace. Zsh is the current
+shell with gmpr-config package. On minion boot, a systemd service clones the 
+archlive-saltminion repository and runs a script from there configuring salt 
+and starts the service.
+
+Master iso only clones the archlive-saltmaster repo, and places the initialization
+script into '/tmp/master/master_init.sh'. This script copies the salt-states
+into /srv/salt, and generates an ssh-keypair for the master.
 
 ### Secure boot
 
@@ -48,8 +55,6 @@ On my test laptop (2013 HP255), can't get a good grip on that tool yet, I manage
 boot it with secure boot enabled, but I don't understand it yet. This 
 results using efiboot directory upon boot? Otherwise syslinux gets used. Don't know
 yet what is the main trigger. Probably something to do with EFI...
-
-Well this is giving problems... gotta look into this more...
 
 ### Kind of security alert
 
