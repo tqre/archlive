@@ -5,6 +5,9 @@ Customised Live ISO creation. Different scripts for masters & minions.
 I'm using Arch Linux as my working environment, haven't tested on other distros.
 Work in progress!
 
+DO NOT PLUG IN ANY DEVICES WHILE THE SCRIPT IS RUNNING!
+Because of the way the original archiso-scripts work, this borks up your system!
+
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
   - https://wiki.archlinux.org/index.php/Installation_guide
