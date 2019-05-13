@@ -4,7 +4,6 @@ dnsmasq
 git
 grml-zsh-config
 htop
-nmap
 openssh
 qemu
 salt
