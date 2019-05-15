@@ -39,7 +39,7 @@ Dd works too, but you need to set bootable flags for the partitions afterwards.
 
 ### Booting the sticks:
 
-The usb stick loads Arch Linux into ram with 3G cowspace. Zsh is the current
+The usb stick loads Arch Linux into ram with 1G cowspace. Zsh is the current
 shell with gmpr-config package. On minion boot, a systemd service clones the 
 archlive-saltminion repository and runs a script from there configuring salt 
 and starts the service.
