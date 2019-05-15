@@ -3,9 +3,11 @@
 Customised Live ISO creation. Different scripts for masters & minions.
 
 I'm using Arch Linux as my working environment, haven't tested on other distros.
-Work in progress!
 
-DO NOT PLUG IN ANY DEVICES WHILE THE SCRIPT IS RUNNING! Because of the way the original archiso-scripts work, this might render your system unusable! Run the scripts in a virtual environment to be on the safe side!
+If you don't run the script in a safe environment... don't blame me if something strange happens.
+DO NOT PLUG IN ANY DEVICES WHILE THE SCRIPT IS RUNNING, OR HAVE ANY EXTRA MOUNTED STUFF ON YOUR PC!
+
+Because of the way the original archiso-scripts work, this might render your system unusable! Run the scripts in a virtual environment to be on the safe side!
 
 #### Preferred method: 
 - Use Arch Linux in a virtual environment
@@ -32,8 +34,8 @@ Run the build script either for minions or master. Please check the
 scripts before running them to know what you are doing.
 
 You end up with an .iso file into /releng/out -directory, which can be dd'd onto 
-usb stick. As some (Windows) machines can't see dd-created bootsticks,
-I'm using VBox-Win10 and Rufus to be able to boot on school's machines.
+usb stick. I'm using VBox-Win10 and Rufus to be able to boot on school's machines.
+Dd works too, but you need to set bootable flags for the partitions afterwards.
 
 ### Booting the sticks:
 
@@ -49,7 +51,7 @@ into /srv/salt, and generates an ssh-keypair for the master.
 ### Secure boot
 
 The original preloader efi-files have been replaced with with preloader-signed to 
-enable booting with secure boot enabled, see the following old webpage for details:
+enable booting with secure boot enabled, see the following (old) webpage for details:
 
 https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/
 
@@ -58,7 +60,7 @@ boot it with secure boot enabled, but I don't understand it yet. This
 results using efiboot directory upon boot? Otherwise syslinux gets used. Don't know
 yet what is the main trigger. Probably something to do with EFI...
 
-### Kind of security alert
+### Salt keypairs
 
 The salt keypairs are generated upon enabling/starting the service for the first time.
 If this is done in airootfs before making the iso image it results in same keypair
