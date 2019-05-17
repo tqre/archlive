@@ -29,6 +29,8 @@ https://tqre.wordpress.com/2019/05/15/arch-linux-salt-and-lamp-stack/
 - hieman on kesken vielä, keskityin projektiin liikaa..
 
 ## Projekti:
+https://tqre.wordpress.com/2019/05/17/the-quantum-cowboy-final-report/
+
 https://tqre.wordpress.com/2019/03/30/getting-started-arch-linux-on-a-stick/
 
 https://github.com/tqre/archlive
@@ -49,6 +51,6 @@ https://tqre.wordpress.com/2019/05/08/systemd-services-to-bring-up-and-configure
 
 https://tqre.wordpress.com/2019/05/11/managing-a-nat-network-for-virtual-machines-with-saltstack/
 
-- loppuraportti tekemättä vielä
+
 
 
